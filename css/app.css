@@ -1,0 +1,113 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+#map {
+	z-index: 1;
+    bottom: 0px;
+    height: 100%;
+    left: 300px;
+    position: absolute;
+    right: 0px;
+}
+
+.options-box {
+	z-index: 2;
+    background: #e0ebff;
+    border: 1px solid #999;
+    border-radius: 3px;
+    height: 100%;
+    line-height: 35px;
+    padding: 10px 10px 30px 10px;
+    text-align: left;
+    width: 290px;
+	position: absolute;
+}
+#resetBtn {
+	width: 100%;
+	color: white;
+    background-color: #70a6ff;
+    display: block;
+    border: 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+#filter {
+    width: 97%;
+    height: 17px;
+    border: none;
+    padding: 4px;
+    border-bottom: 2px solid #7894c1;
+    border-top: 2px solid #a0c3fd;
+    border-radius: 5px;
+}
+.list-container {
+	background-color: #e0ebff;
+	list-style-type: none;
+	padding: 5px;
+	text-decoration: none;
+}
+.list-container a {
+	text-decoration: none;
+	color: white;
+}
+.list-container .list {
+	background-color: #82b1ff;
+	margin: 2px;
+	padding: 1px 5px;
+	border-radius: 5px;
+}
+/* If the screen size is 600px wide or less, hide the element */
+
+@media only screen and (max-width: 600px) {
+.options-box {
+	display: none;
+	padding-top: 50px;
+}
+    #map {
+        bottom: 0px;
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        right: 0px;
+    }
+    /* hamburger source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js */
+    .hamburger {
+		z-index: 3;
+        position: absolute;
+		left: 5px;
+		top: 5px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+}
+
+.display {
+	display: block;
+}
